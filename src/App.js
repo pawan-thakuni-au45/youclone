@@ -4,12 +4,13 @@ import Header from './component/Header';
 import Body from './component/Body';
 
 import appStore from "./utils/store"
+import { Outlet } from 'react-router-dom';
 function App() {
   return (
     <Provider store={appStore}>
     <div>
      <Header/>
-     <Body/>
+    <Outlet/>
      </div>
     
     </Provider>
