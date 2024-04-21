@@ -9,9 +9,11 @@ const Body = () => {
   
     <div className='flex'>
      <Sidebar/>
-    <MainContainer/>
+   
     </div>
   )
 }
 
 export default Body
+
+ // <MainContainer/>
