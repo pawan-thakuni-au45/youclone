@@ -2,6 +2,7 @@ import React ,{useEffect} from 'react'
 import ChatMessage from './ChatMessage'
 import { useDispatch, useSelector } from 'react-redux'
 import { addMessages } from '../utils/chatSlice'
+import { generateRandomText,generate } from '../utils/help'
 
 
 const ChatBox = () => {
@@ -12,16 +13,16 @@ const ChatBox = () => {
 
         const i=setInterval(()=>{
           dispatch(addMessages({
-            name:"Pawan Thakuni",
-            message:"Hii there !how are you❤️"
+            name:generate(),
+            message:generateRandomText(20)+ "❤️"
           }))
 
-        },2000)
+        },500)
 
         return ()=>clearInterval(i)
     })
   return (
-    <div className=' h-[500px] border border-black bg-slate-200 ml-3'>ChatBox
+    <div className=' h-[500px] border border-black bg-slate-200 ml-3 overflow-y-scroll flex flex-col-reverse'>ChatBox
 
     {
         chatMessages.map((e,i)=>
@@ -30,7 +31,7 @@ const ChatBox = () => {
             ></ChatMessage>
         )
     }
-    <ChatMessage name="Pawan thakuni" message="Wow nice video😊"/>
+   
     </div>
   )
 }

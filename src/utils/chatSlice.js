@@ -8,7 +8,8 @@ const ChatSlice=createSlice({
 
     reducers:{
         addMessages:(state,action)=>{
-            state.messages.push(action.payload)
+            state.messages.splice(10,2);//whenever i am adding new message ,i am also removing old mesaage from top
+            state.messages.unshift(action.payload);//unshift will display messages from bottom to top
         }
     }
 })
