@@ -7,6 +7,7 @@ import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import MainContainer from './component/MainContainer';
 import Body from './component/Body';
 import Watch from './component/Watch';
+import Usememmo from './component/Usememmo';
 const approuter=createBrowserRouter([{
   
     path:'/',
@@ -25,6 +26,10 @@ const approuter=createBrowserRouter([{
       {
         path:'/watch',
         element:<Watch/>
+      },
+      {
+        path:'/memo',
+        element:<Usememmo/>
       },
     ],
   
