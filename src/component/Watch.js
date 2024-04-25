@@ -2,10 +2,18 @@ import React from 'react'
 import { useSearchParams } from 'react-router-dom'
 import CommentContainer from './CommentContainer';
 import ChatBox from './ChatBox';
+import Shimmer from './Shimmer';
 
 const Watch = () => {
     const[getVideo]=useSearchParams()
     console.log(getVideo.get('v'));
+    if(getVideo.length===0){
+      return (
+        <Shimmer/>
+      )
+    }
+
+
   return (
     <div className='flex flex-col'>
     <div className='flex '>

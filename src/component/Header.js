@@ -8,7 +8,7 @@ const Header = () => {
   const[searchText,setSearchText]=useState("")
   const[suggestion,setSuggestion]=useState([])
   const[showSuggestion,setShowSuggestion]=useState(false)
-  console.log(searchText);
+  console.log("search",searchText);
 
 useEffect(()=>{
 
@@ -16,17 +16,18 @@ useEffect(()=>{
   const timer=setTimeout(()=>getSearchResult(),200);
 
   return ()=>{
-    clearTimeout(timer)
+    clearTimeout(timer);
   }
-  // getSearchResult()
+ 
   
 
 },[searchText])
+ // getSearchResult()
 
-const getSearchResult= async()=>{
+const getSearchResult = async ()=>{
     const data=await fetch(YOUTUBE_SEARCH_API+searchText)
     const json=await data.json()
-    setSuggestion(json[1])
+    setSuggestion(json)
 
 }
   const dispatch=useDispatch()
