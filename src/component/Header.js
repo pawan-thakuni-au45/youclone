@@ -13,7 +13,7 @@ const Header = () => {
 useEffect(()=>{
 
 
-  const timer=setTimeout(()=>getSearchResult(),200);
+  const timer=setTimeout(()=>getSearchResult(),2000);
 
   return ()=>{
     clearTimeout(timer);
@@ -25,10 +25,10 @@ useEffect(()=>{
  // getSearchResult()
 
 const getSearchResult = async ()=>{
-    const data=await fetch(searchText)
+    const data=await fetch(YOUTUBE_SEARCH_API + searchText)
     const json=await data.json()
     console.log(json,'ggg');
-    setSuggestion(json)
+    setSuggestion(json[1])
 
 }
   const dispatch=useDispatch()
@@ -36,7 +36,9 @@ const getSearchResult = async ()=>{
   const ontoggle=()=>{
     dispatch(toggleMenu())
   }
-  return (
+
+  
+    return (
     <div className='grid grid-flow-col  mt-5 my-10 shadow-lg'>
      <div className='flex col-span-1'>
      <img 
