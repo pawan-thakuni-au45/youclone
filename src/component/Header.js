@@ -39,18 +39,18 @@ const getSearchResult = async ()=>{
 
   
     return (
-    <div className='grid grid-flow-col  mt-5 my-10 shadow-lg'>
-     <div className='flex col-span-1'>
+    <div className='grid grid-flow-col md:grid-flow-col  mt-5 my-10 shadow-lg '>
+     <div className='flex col-span-3 md:col-span-1'>
      <img 
      onClick={()=>ontoggle()}
      className='h-10'alt="img" src="data:image/jpeg;base64,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" ></img>
     
-      <Link to='/'><img className='h-10 w-52  ' alt="you" src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg"></img></Link>
+      <Link to='/'><img className=' h-[40px] w-[40px] ml-6 md:h-10 md:w-52  ' alt="you" src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg"></img></Link>
      </div>
 
      <div>
-     <div className='flex justify-center col-span-10 '>
-    <input className="h-10 mx-66 border border-gray-500 pl-80 rounded-l-full" type="text" 
+     <div className='flex justify-center col-span-7 md:col-span-10 '>
+    <input className="h-10 ml-[200px] w-9 md:mx-66 border border-gray-500 pl-80 rounded-l-full " type="text" 
     value={searchText}
     onChange={(e)=>setSearchText(e.target.value)}
     onFocus={()=>setShowSuggestion(true)}

@@ -17,15 +17,15 @@ const Watch = () => {
   return (
     <div className='flex flex-col'>
     <div className='flex '>
-    <div>
-    <iframe width="1200" 
+    <div >
+    <iframe className='w-[400px] md:w-[1200px]' 
     height="500" 
     src={"https://www.youtube.com/embed/"+getVideo.get('v')} 
     title="YouTube video player" frameBorder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
     </div>
-    <div className='w-full'>
+    <div className='w-40 md:w-full'>
       <ChatBox/>
     </div>
     </div>
