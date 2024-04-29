@@ -13,7 +13,7 @@ const Header = () => {
 useEffect(()=>{
 
 
-  const timer=setTimeout(()=>getSearchResult(),2000);
+  const timer=setTimeout(()=>getSearchResult(),200);
 
   return ()=>{
     clearTimeout(timer);
